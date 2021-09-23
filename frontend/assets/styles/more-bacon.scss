@@ -1,0 +1,19 @@
+main main { // i had to call main twice, otherwise styles on landing page would break
+   $buttonContainerHeight: 56px;
+
+  div {
+    display: grid;
+    grid-template-rows: $buttonContainerHeight calc(100vh - #{$buttonContainerHeight});
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  section:nth-child(1) {
+    padding: 15px;
+    text-align: center;
+  }
+
+  section:nth-child(2) {
+    overflow: auto;
+  }
+}
