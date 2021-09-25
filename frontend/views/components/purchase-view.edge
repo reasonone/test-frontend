@@ -1,0 +1,19 @@
+<div class="purchase-container">
+  <section class="form-container">
+    <form class="purchase-form">
+      <section class="personal-info">
+        @include('partials/personal-info-fields')
+      </section>
+      <section class="payment-details">
+        @include('partials/payment-details')
+      </section>
+      <button class="button" type="submit">
+        <img class="cart-icon" src="images/shopping-cart.svg" />
+        {{lang.purchaseButtonText}}
+      </button>
+    </form>
+  </section>
+  <section class="right-panel">
+    @include('partials/summary')
+  </section>
+</div>

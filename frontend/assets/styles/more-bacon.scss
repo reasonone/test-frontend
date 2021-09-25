@@ -1,5 +1,5 @@
-main main { // i had to call main twice, otherwise styles on landing page would break
-   $buttonContainerHeight: 56px;
+main.bacon {
+  $buttonContainerHeight: 56px;
 
   div {
     display: grid;

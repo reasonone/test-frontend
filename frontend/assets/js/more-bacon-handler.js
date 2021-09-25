@@ -7,14 +7,20 @@ const multipleBaconHandler = () => {
 
 const getButtonElement = () => document.getElementsByTagName('button')[0];
 
-export default function mountMoreBaconHandler() {
+const mountMoreBaconHandler = () => {
   const buttonElement = getButtonElement();
 
   buttonElement.addEventListener('click', multipleBaconHandler);
-}
+};
 
-export const unmountMoreBaconHandler = () => {
+const unmountMoreBaconHandler = () => {
   const buttonElement = getButtonElement();
 
   buttonElement.removeEventListener('click', multipleBaconHandler);
 };
+
+export default mountMoreBaconHandler;
+
+export {
+  unmountMoreBaconHandler
+}

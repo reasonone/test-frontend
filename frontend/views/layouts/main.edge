@@ -6,9 +6,14 @@
     <title>{{ title }}</title>
     @entryPointStyles('app')
     @entryPointScripts('app')
+    @!section('scripts')
   </head>
   <body>
-    <main>
+    <main
+      @if (mainClass)
+        class="{{mainClass}}"
+      @end
+    >
       @!section('body')
     </main>
   </body>
