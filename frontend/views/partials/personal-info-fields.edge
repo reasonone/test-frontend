@@ -2,21 +2,21 @@
 <div class="input-group double-field">
   <div class="input-field ">
     <label>
-      First name
+      {{lang.firstNameLabel}}
     </label>
-    <input id="first-name" type="text" placeholder="Elon" />
+    <input id="firstName" type="text" placeholder="Elon" />
   </div>
   <div class="input-field">
     <label>
-      Last name
+      {{lang.lastNameLabel}}
     </label>
-    <input id="last-name" type="text" placeholder="Musk" />
+    <input id="lastName" type="text" placeholder="Musk" />
   </div>
 </div>
 <div class="input-group single-field">
   <div class="input-field">
     <label>
-      Email
+      {{lang.emailLabel}}
     </label>
     <input id="email" type="text" placeholder="elon@spacex.com" />
   </div>
@@ -24,23 +24,36 @@
 <div class="input-group double-field">
   <div class="input-field">
     <label>
-      Country
+      {{lang.countryLabel}}
     </label>
-    <input id="country" type="text" placeholder="Country" />
+    <div class="custom-select">
+      <select id="country">
+        <option value="null"></option>
+        <option selected="selected" value="United States">United States</option>
+        <option value="England">England</option>
+        <option value="Germany">Germany</option>
+        <option value="Poland">Poland</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Spain">Spain</option>
+        <option value="Finland">Finland</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Russia">Russia</option>
+      </select>
+    </div>
   </div>
   <div class="input-field">
     <label>
-      Postal Code
+      {{lang.postalCodeLabel}}
     </label>
-    <input id="postal-code" type="text" placeholder="10001" />
+    <input id="postalCode" type="text" placeholder="10001" />
   </div>
 </div>
 <div class="input-group single-field">
   <div class="input-field">
     <label>
-      Phone Number
+      {{lang.phoneNumberLabel}}
     </label>
 
-    <input id="phone-number" type="text" placeholder="(212) 692-93-92" />
+    <input id="phoneNumber" type="text" placeholder="(212) 692-93-92" />
   </div>
 </div>

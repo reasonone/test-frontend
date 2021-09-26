@@ -2,18 +2,26 @@
 @set('title', 'Checkout page')
 @set('mainClass', 'purchase')
 
-@section('scripts')
-  <script type="application/javascript">window.purchaseData = JSON.parse("{{JSON.stringify(state.cart)}}".replace(/&quot;/g,'"'))</script>
-@end
-
 @section('body')
   @!component('components/purchase-view', {
-    data: JSON.stringify(state.cart),
+    data: state.cart,
     lang: {
       personalInfo: 'Personal Information',
       paymentDetails: 'Payment Details',
       purchaseButtonText: 'Complete Purchase',
+      firstNameLabel: 'First name',
+      lastNameLabel: 'Last name',
+      emailLabel: 'Email',
+      countryLabel: 'Country',
+      postalCodeLabel: 'Postal Code',
+      phoneNumberLabel: 'Phone Number',
+      creditCardNumberLabel: 'Credit Card Number',
+      securityCodeLabel: 'Security code',
+      expirationDateLabel: 'Expiration date',
       summaryTitle: 'Your Order',
+      summarySubTotalText: 'Total purchases',
+      summaryTaxText: 'Estimated tax',
+      summaryTotalText: 'Total',
     }
   })
 @end
