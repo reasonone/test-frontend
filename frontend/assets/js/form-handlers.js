@@ -15,12 +15,17 @@ const mountFormHandlers = () => {
 
       sendFormData(data)
         .then((feedback) => {
+          document.querySelector('body').classList.remove('success', 'error');
+
           if (feedback.message) {
-            alert(feedback.message);
+            document.querySelector('body').classList.add('success');
           } else {
-            alert('Something went wrong!')
+            document.querySelector('body').classList.add('error');
           }
-        });
+        })
+      .catch(() => {
+        document.querySelector('body').classList.add('error');
+      });
     }
 
   })

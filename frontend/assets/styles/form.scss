@@ -2,6 +2,7 @@
 
 $redColor: #b71c1c;
 $lightGreenColor: #6BD400;
+$greenColor: #478E0D;
 $whiteColor: #ffffff;
 $blackColor: #000000;
 $lightGrayColor: #dbe1eb;
@@ -21,6 +22,31 @@ $fontFamilyRoboto: 'Roboto', sans-serif;
 
 @mixin shadow {
   box-shadow: 0 2px 2px $shadowColor;
+}
+
+body {
+  &.success:after {
+    content: "Purchase Completed!";
+    background-color: $greenColor;
+  }
+
+  &.error:after {
+    content: "Purchase failed!";
+    background-color: $redColor;
+  }
+
+  &.success:after,
+  &.error:after {
+    top: 5px;
+    right: 0;
+    height: 50px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 }
 
 main.purchase {
