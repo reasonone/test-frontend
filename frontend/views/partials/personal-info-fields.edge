@@ -4,13 +4,13 @@
     <label>
       {{lang.firstNameLabel}}
     </label>
-    <input id="firstName" type="text" placeholder="Elon" />
+    <input id="firstName" name="firstName" type="text" placeholder="Elon" />
   </div>
   <div class="input-field">
     <label>
       {{lang.lastNameLabel}}
     </label>
-    <input id="lastName" type="text" placeholder="Musk" />
+    <input id="lastName" name="lastName" type="text" placeholder="Musk" />
   </div>
 </div>
 <div class="input-group single-field">
@@ -18,7 +18,7 @@
     <label>
       {{lang.emailLabel}}
     </label>
-    <input id="email" type="text" placeholder="elon@spacex.com" />
+    <input id="email" name="email" type="text" placeholder="elon@spacex.com" />
   </div>
 </div>
 <div class="input-group double-field">
@@ -27,7 +27,7 @@
       {{lang.countryLabel}}
     </label>
     <div class="custom-select">
-      <select id="country">
+      <select id="country" name="country">
         <option value="null"></option>
         <option selected="selected" value="United States">United States</option>
         <option value="England">England</option>
@@ -45,7 +45,7 @@
     <label>
       {{lang.postalCodeLabel}}
     </label>
-    <input id="postalCode" type="text" placeholder="10001" />
+    <input id="postalCode" name="postalCode" type="text" placeholder="10001" />
   </div>
 </div>
 <div class="input-group single-field">
@@ -54,6 +54,6 @@
       {{lang.phoneNumberLabel}}
     </label>
 
-    <input id="phoneNumber" type="text" placeholder="(212) 692-93-92" />
+    <input id="phone" name="phone" type="text" placeholder="(212) 692-93-92" />
   </div>
 </div>
